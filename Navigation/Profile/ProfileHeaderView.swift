@@ -55,9 +55,16 @@ class ProfileHeaderView: UIView {
         button.layer.shadowRadius = 4
         button.layer.shadowColor = UIColor.black.cgColor
         button.layer.opacity = 0.7
+        
+        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+
 
         return button
     }()
+    
+    @objc func buttonPressed() {
+        print(userStatus.text ?? "no status")
+    }
     
     private let userName: UITextField = {
         let name = UITextField()
@@ -103,7 +110,4 @@ class ProfileHeaderView: UIView {
                                   height: userStatus.font!.pointSize)
     }
 
-
-
-    
 }
