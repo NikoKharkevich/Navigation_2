@@ -54,7 +54,7 @@ class ProfileHeaderView: UIView {
         button.layer.shadowOffset = CGSize(width: 4, height: 4)
         button.layer.shadowRadius = 4
         button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.opacity = 0.7
+        button.layer.shadowOpacity = 0.7
         
         button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
 
@@ -101,12 +101,12 @@ class ProfileHeaderView: UIView {
         
         userName.frame = CGRect(x: userPicture.frame.maxX + 16,
                                 y: self.safeAreaInsets.top + 27,
-                                width: 300,
-                                height: 50)
+                                width: self.bounds.width - self.safeAreaInsets.left - self.safeAreaInsets.right - 16*2,
+                                height: userName.font!.pointSize)
         
         userStatus.frame = CGRect(x: userPicture.frame.maxX + 16,
                                   y: statusButton.frame.minY - 34 - userStatus.frame.height,
-                                  width: 300,
+                                  width: self.bounds.width - self.safeAreaInsets.left - self.safeAreaInsets.right - 16*2,
                                   height: userStatus.font!.pointSize)
     }
 
