@@ -14,7 +14,7 @@ class ProfileHeaderView: UIView {
     private var statusText: String = ""
   
     override init(frame: CGRect) {
-        super.init(frame: frame)
+        super .init(frame: frame)
     }
     
     required init?(coder: NSCoder) {
