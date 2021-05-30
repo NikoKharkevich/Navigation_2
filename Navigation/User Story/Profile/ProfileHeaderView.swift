@@ -28,6 +28,9 @@ class ProfileHeaderView: UIView {
     
     override func awakeFromNib() {
         avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width / 2
+        avatarImageView.layer.borderWidth = 3
+        avatarImageView.layer.borderColor = UIColor.white.cgColor
+        avatarImageView.clipsToBounds = true
         
         setStatusButton.setTitle("Set status", for: .normal)
         setStatusButton.setTitleColor(.white, for: .normal)

@@ -11,7 +11,7 @@
         <!--Profile-->
         <scene sceneID="bRX-aC-Cpi">
             <objects>
-                <viewController storyboardIdentifier="ProfileVC" id="Ca1-kw-dKJ" customClass="ProfileViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ca1-kw-dKJ" customClass="ProfileViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z6I-Co-0n3" customClass="ProfileHeaderView" customModule="Navigation" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +33,7 @@
                                         </constraints>
                                         <state key="normal" title="setStatusButton"/>
                                         <connections>
-                                            <action selector="setStatusButton:" destination="Ca1-kw-dKJ" eventType="touchUpInside" id="vpX-x1-tsD"/>
+                                            <action selector="setStatusButton:" destination="z6I-Co-0n3" eventType="touchUpInside" id="SHG-OF-gSN"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="fullNameLabel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="phe-lw-eYT">
@@ -54,7 +54,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ttl-Xz-Soo">
-                                        <rect key="frame" x="260.33333333333331" y="101" width="32" height="40"/>
+                                        <rect key="frame" x="260.33333333333331" y="101" width="137.66666666666669" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="H7m-PU-jaB"/>
                                         </constraints>
@@ -62,7 +62,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstItem="rpe-cR-EM5" firstAttribute="top" secondItem="1O5-8D-nj5" secondAttribute="bottom" constant="34" id="9LB-W5-V2Q"/>
                                     <constraint firstAttribute="height" constant="220" id="Hqv-u5-EaG"/>
@@ -71,6 +71,7 @@
                                     <constraint firstItem="rpe-cR-EM5" firstAttribute="top" secondItem="Ttl-Xz-Soo" secondAttribute="bottom" constant="1" id="T9g-4N-dQ9"/>
                                     <constraint firstItem="phe-lw-eYT" firstAttribute="leading" secondItem="pNk-Xj-9C7" secondAttribute="trailing" constant="16" id="U1w-YU-A0R"/>
                                     <constraint firstItem="rpe-cR-EM5" firstAttribute="leading" secondItem="L3o-7y-Azb" secondAttribute="leading" constant="16" id="VFz-B8-KQt"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ttl-Xz-Soo" secondAttribute="trailing" constant="16" id="Yae-l2-wVb"/>
                                     <constraint firstItem="pNk-Xj-9C7" firstAttribute="leading" secondItem="L3o-7y-Azb" secondAttribute="leading" constant="16" id="dj9-dT-mOV"/>
                                     <constraint firstItem="Ttl-Xz-Soo" firstAttribute="leading" secondItem="1O5-8D-nj5" secondAttribute="trailing" constant="30" id="fzd-2T-fhG"/>
                                     <constraint firstItem="1O5-8D-nj5" firstAttribute="leading" secondItem="pNk-Xj-9C7" secondAttribute="trailing" constant="16" id="m0T-bC-VOd"/>
@@ -86,6 +87,13 @@
                             <constraint firstItem="FCL-IZ-fe8" firstAttribute="trailing" secondItem="L3o-7y-Azb" secondAttribute="trailing" id="e8e-YT-YER"/>
                             <constraint firstItem="L3o-7y-Azb" firstAttribute="leading" secondItem="FCL-IZ-fe8" secondAttribute="leading" id="q46-jM-6N0"/>
                         </constraints>
+                        <connections>
+                            <outlet property="avatarImageView" destination="pNk-Xj-9C7" id="PWa-Rr-4cr"/>
+                            <outlet property="fullNameLabel" destination="phe-lw-eYT" id="hOw-Qd-L9u"/>
+                            <outlet property="setStatusButton" destination="rpe-cR-EM5" id="VAL-3l-HCh"/>
+                            <outlet property="statusLabel" destination="1O5-8D-nj5" id="k6d-g1-q6b"/>
+                            <outlet property="statusTextField" destination="Ttl-Xz-Soo" id="0jI-Gt-cWn"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="TPi-FS-zh0"/>
                 </viewController>
@@ -246,8 +254,8 @@
         <image name="Minon (1)" width="140" height="166.66667175292969"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

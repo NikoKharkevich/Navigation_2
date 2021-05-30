@@ -10,7 +10,6 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     var profileHeader: ProfileHeaderView = ProfileHeaderView()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
