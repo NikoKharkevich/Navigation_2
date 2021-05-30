@@ -9,7 +9,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-    var profileVC: ProfileHeaderView = ProfileHeaderView()
+    var profileHeader: ProfileHeaderView = ProfileHeaderView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +20,6 @@ class ProfileViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
     }
-
+    
+    profileHeader.frame = view.frame
 }
