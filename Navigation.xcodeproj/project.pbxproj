@@ -19,6 +19,7 @@
 		C007D6CF265581AF007A5E15 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007D6CE265581AF007A5E15 /* ProfileHeaderView.swift */; };
 		C007D6D126558215007A5E15 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007D6D026558215007A5E15 /* ProfileViewController.swift */; };
 		C00B26412657B3B500F8E22A /* Profile.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00B26402657B3B500F8E22A /* Profile.xcassets */; };
+		C026B1DC2665427700B7AFE6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C026B1DB2665427700B7AFE6 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C007D6CE265581AF007A5E15 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		C007D6D026558215007A5E15 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C00B26402657B3B500F8E22A /* Profile.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Profile.xcassets; sourceTree = "<group>"; };
+		C026B1DB2665427700B7AFE6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				C007D6CE265581AF007A5E15 /* ProfileHeaderView.swift */,
 				C007D6D026558215007A5E15 /* ProfileViewController.swift */,
+				C026B1DB2665427700B7AFE6 /* LoginViewController.swift */,
 				C00B26402657B3B500F8E22A /* Profile.xcassets */,
 			);
 			path = Profile;
@@ -189,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C026B1DC2665427700B7AFE6 /* LoginViewController.swift in Sources */,
 				C007D6CF265581AF007A5E15 /* ProfileHeaderView.swift in Sources */,
 				060782B6250CE27700A87020 /* FeedViewController.swift in Sources */,
 				060782B2250CE27700A87020 /* AppDelegate.swift in Sources */,
