@@ -59,5 +59,4 @@ class ProfileHeaderView: UIView {
         statusTextField.layer.borderWidth = 1
     }
     
-    
 }

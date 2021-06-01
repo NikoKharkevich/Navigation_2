@@ -11,7 +11,7 @@
         <!--Profile-->
         <scene sceneID="bRX-aC-Cpi">
             <objects>
-                <viewController id="Ca1-kw-dKJ" customClass="ProfileViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Profile" id="Ca1-kw-dKJ" customClass="ProfileViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z6I-Co-0n3" customClass="ProfileHeaderView" customModule="Navigation" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,7 +104,7 @@
         <!--Login View Controller-->
         <scene sceneID="Y97-EY-Udk">
             <objects>
-                <viewController id="VQk-Jg-S3X" customClass="LoginViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="VQk-Jg-S3X" customClass="LoginViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qmh-z4-h6Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2qn-Yu-VqZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1706" y="200"/>
+            <point key="canvasLocation" x="-1935" y="-129"/>
         </scene>
         <!--Feed-->
         <scene sceneID="pR1-4r-6ob">
@@ -227,7 +227,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="0O8-tr-oe2">
             <objects>
-                <tabBarController id="VVa-ty-c3K" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="AppVC" id="VVa-ty-c3K" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fGo-88-qdc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
