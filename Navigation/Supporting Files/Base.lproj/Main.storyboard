@@ -12,11 +12,11 @@
         <scene sceneID="bRX-aC-Cpi">
             <objects>
                 <viewController id="Ca1-kw-dKJ" customClass="ProfileViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="z6I-Co-0n3" customClass="ProfileHeaderView" customModule="Navigation" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="z6I-Co-0n3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3o-7y-Azb">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3o-7y-Azb" customClass="ProfileHeaderView" customModule="Navigation" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88" width="414" height="220"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Minon (1)" translatesAutoresizingMaskIntoConstraints="NO" id="pNk-Xj-9C7">
@@ -33,19 +33,19 @@
                                         </constraints>
                                         <state key="normal" title="setStatusButton"/>
                                         <connections>
-                                            <action selector="setStatusButton:" destination="z6I-Co-0n3" eventType="touchUpInside" id="SHG-OF-gSN"/>
+                                            <action selector="setStatusButton:" destination="L3o-7y-Azb" eventType="touchUpInside" id="E0J-e4-xGi"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="fullNameLabel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="phe-lw-eYT">
-                                        <rect key="frame" x="142" y="27" width="110" height="18"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="phe-lw-eYT">
+                                        <rect key="frame" x="142" y="27" width="45" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="YA1-ja-tjw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="statusLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1O5-8D-nj5">
-                                        <rect key="frame" x="142" y="94" width="88.333333333333314" height="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am so excited..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1O5-8D-nj5">
+                                        <rect key="frame" x="142" y="78" width="127.33333333333331" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="qZT-Mv-PiS"/>
                                         </constraints>
@@ -53,10 +53,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ttl-Xz-Soo">
-                                        <rect key="frame" x="260.33333333333331" y="101" width="137.66666666666669" height="40"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="set new status here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ttl-Xz-Soo">
+                                        <rect key="frame" x="243" y="101" width="155" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="H7m-PU-jaB"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="OLK-WH-Vmp"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -64,20 +65,26 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
-                                    <constraint firstItem="rpe-cR-EM5" firstAttribute="top" secondItem="1O5-8D-nj5" secondAttribute="bottom" constant="34" id="9LB-W5-V2Q"/>
+                                    <constraint firstItem="rpe-cR-EM5" firstAttribute="top" secondItem="1O5-8D-nj5" secondAttribute="bottom" constant="50" id="9LB-W5-V2Q"/>
                                     <constraint firstAttribute="height" constant="220" id="Hqv-u5-EaG"/>
                                     <constraint firstItem="pNk-Xj-9C7" firstAttribute="top" secondItem="L3o-7y-Azb" secondAttribute="top" constant="16" id="Pvv-Ia-Iic"/>
                                     <constraint firstItem="rpe-cR-EM5" firstAttribute="top" secondItem="pNk-Xj-9C7" secondAttribute="bottom" constant="16" id="SeV-2v-X78"/>
                                     <constraint firstItem="rpe-cR-EM5" firstAttribute="top" secondItem="Ttl-Xz-Soo" secondAttribute="bottom" constant="1" id="T9g-4N-dQ9"/>
                                     <constraint firstItem="phe-lw-eYT" firstAttribute="leading" secondItem="pNk-Xj-9C7" secondAttribute="trailing" constant="16" id="U1w-YU-A0R"/>
                                     <constraint firstItem="rpe-cR-EM5" firstAttribute="leading" secondItem="L3o-7y-Azb" secondAttribute="leading" constant="16" id="VFz-B8-KQt"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ttl-Xz-Soo" secondAttribute="trailing" constant="16" id="Yae-l2-wVb"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ttl-Xz-Soo" secondAttribute="trailing" constant="16" id="ceD-8F-ArR"/>
                                     <constraint firstItem="pNk-Xj-9C7" firstAttribute="leading" secondItem="L3o-7y-Azb" secondAttribute="leading" constant="16" id="dj9-dT-mOV"/>
-                                    <constraint firstItem="Ttl-Xz-Soo" firstAttribute="leading" secondItem="1O5-8D-nj5" secondAttribute="trailing" constant="30" id="fzd-2T-fhG"/>
                                     <constraint firstItem="1O5-8D-nj5" firstAttribute="leading" secondItem="pNk-Xj-9C7" secondAttribute="trailing" constant="16" id="m0T-bC-VOd"/>
                                     <constraint firstItem="phe-lw-eYT" firstAttribute="top" secondItem="L3o-7y-Azb" secondAttribute="top" constant="27" id="qUb-nm-Osq"/>
                                     <constraint firstAttribute="trailing" secondItem="rpe-cR-EM5" secondAttribute="trailing" constant="16" id="wMd-81-YYK"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="pNk-Xj-9C7" id="UFr-pL-mXZ"/>
+                                    <outlet property="fullNameLabel" destination="phe-lw-eYT" id="NLb-WR-Ybe"/>
+                                    <outlet property="setStatusButton" destination="rpe-cR-EM5" id="O5h-OV-QH0"/>
+                                    <outlet property="statusLabel" destination="1O5-8D-nj5" id="JPD-Cf-SAP"/>
+                                    <outlet property="statusTextField" destination="Ttl-Xz-Soo" id="Xr5-wz-PV3"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FCL-IZ-fe8"/>
@@ -87,13 +94,6 @@
                             <constraint firstItem="FCL-IZ-fe8" firstAttribute="trailing" secondItem="L3o-7y-Azb" secondAttribute="trailing" id="e8e-YT-YER"/>
                             <constraint firstItem="L3o-7y-Azb" firstAttribute="leading" secondItem="FCL-IZ-fe8" secondAttribute="leading" id="q46-jM-6N0"/>
                         </constraints>
-                        <connections>
-                            <outlet property="avatarImageView" destination="pNk-Xj-9C7" id="PWa-Rr-4cr"/>
-                            <outlet property="fullNameLabel" destination="phe-lw-eYT" id="hOw-Qd-L9u"/>
-                            <outlet property="setStatusButton" destination="rpe-cR-EM5" id="VAL-3l-HCh"/>
-                            <outlet property="statusLabel" destination="1O5-8D-nj5" id="k6d-g1-q6b"/>
-                            <outlet property="statusTextField" destination="Ttl-Xz-Soo" id="0jI-Gt-cWn"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="TPi-FS-zh0"/>
                 </viewController>
