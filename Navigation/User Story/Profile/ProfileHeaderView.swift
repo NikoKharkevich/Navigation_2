@@ -58,6 +58,7 @@ class ProfileHeaderView: UIView {
         statusTextField.layer.cornerRadius = 12
         statusTextField.layer.borderColor = UIColor.black.cgColor
         statusTextField.layer.borderWidth = 1
+        statusTextField.clipsToBounds = true
     }
     
 }
