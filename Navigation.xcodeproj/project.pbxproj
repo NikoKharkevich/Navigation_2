@@ -20,6 +20,10 @@
 		C00B26412657B3B500F8E22A /* Profile.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00B26402657B3B500F8E22A /* Profile.xcassets */; };
 		C026B1DC2665427700B7AFE6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C026B1DB2665427700B7AFE6 /* LoginViewController.swift */; };
 		C0DB8BB5266A052C00C9FD49 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB8BB4266A052C00C9FD49 /* ProfileHeaderView.swift */; };
+		C0DB8BBD266A8ECE00C9FD49 /* ModelPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB8BBC266A8ECE00C9FD49 /* ModelPost.swift */; };
+		C0DB8BC6266A9DB200C9FD49 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB8BC5266A9DB200C9FD49 /* Store.swift */; };
+		C0DB8BC8266A9EE300C9FD49 /* Store.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0DB8BC7266A9EE300C9FD49 /* Store.xcassets */; };
+		C0DB8BCB266AA20D00C9FD49 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB8BCA266AA20D00C9FD49 /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		C00B26402657B3B500F8E22A /* Profile.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Profile.xcassets; sourceTree = "<group>"; };
 		C026B1DB2665427700B7AFE6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C0DB8BB4266A052C00C9FD49 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		C0DB8BBC266A8ECE00C9FD49 /* ModelPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPost.swift; sourceTree = "<group>"; };
+		C0DB8BC5266A9DB200C9FD49 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		C0DB8BC7266A9EE300C9FD49 /* Store.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Store.xcassets; sourceTree = "<group>"; };
+		C0DB8BCA266AA20D00C9FD49 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,7 @@
 				C007D6D026558215007A5E15 /* ProfileViewController.swift */,
 				C0DB8BB4266A052C00C9FD49 /* ProfileHeaderView.swift */,
 				C026B1DB2665427700B7AFE6 /* LoginViewController.swift */,
+				C0DB8BCA266AA20D00C9FD49 /* PostTableViewCell.swift */,
 				C00B26402657B3B500F8E22A /* Profile.xcassets */,
 			);
 			path = Profile;
@@ -115,9 +124,29 @@
 			children = (
 				060782B5250CE27700A87020 /* FeedViewController.swift */,
 				C0B5EC76265EB107002AB44F /* Post */,
+				C0DB8BBB266A8E9F00C9FD49 /* Models */,
+				C0DB8BC4266A9D9100C9FD49 /* Store */,
 				C007D6CD26558187007A5E15 /* Profile */,
 			);
 			path = "User Story";
+			sourceTree = "<group>";
+		};
+		C0DB8BBB266A8E9F00C9FD49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C0DB8BBC266A8ECE00C9FD49 /* ModelPost.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C0DB8BC4266A9D9100C9FD49 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				C0DB8BC5266A9DB200C9FD49 /* Store.swift */,
+				C0DB8BC7266A9EE300C9FD49 /* Store.xcassets */,
+			);
+			name = Store;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0DB8BC8266A9EE300C9FD49 /* Store.xcassets in Resources */,
 				060782BE250CE27A00A87020 /* LaunchScreen.storyboard in Resources */,
 				C00B26412657B3B500F8E22A /* Profile.xcassets in Resources */,
 				060782BB250CE27A00A87020 /* Assets.xcassets in Resources */,
@@ -198,9 +228,12 @@
 				060782C6250CEB0A00A87020 /* InfoViewController.swift in Sources */,
 				C0DB8BB5266A052C00C9FD49 /* ProfileHeaderView.swift in Sources */,
 				060782CA250CEE7200A87020 /* Post.swift in Sources */,
+				C0DB8BC6266A9DB200C9FD49 /* Store.swift in Sources */,
 				060782B4250CE27700A87020 /* SceneDelegate.swift in Sources */,
 				C007D6D126558215007A5E15 /* ProfileViewController.swift in Sources */,
 				060782C8250CEE5D00A87020 /* PostViewController.swift in Sources */,
+				C0DB8BBD266A8ECE00C9FD49 /* ModelPost.swift in Sources */,
+				C0DB8BCB266AA20D00C9FD49 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

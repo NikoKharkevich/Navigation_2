@@ -159,11 +159,13 @@ class LoginViewController: UIViewController {
         
     }
     
-    @objc func tapOnLoginButton() {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let controller = sb.instantiateViewController(identifier: "Profile") as! ProfileViewController
-        self.present(controller, animated: true, completion: nil)
+    @objc private func tapOnLoginButton() {
+
+        let controller = storyboard?.instantiateViewController(identifier: "ProfileVC")
+        navigationController?.pushViewController(controller!, animated: true)
+        
     }
+
     
     // MARK: Keyboard
     override func viewWillAppear(_ animated: Bool) {
