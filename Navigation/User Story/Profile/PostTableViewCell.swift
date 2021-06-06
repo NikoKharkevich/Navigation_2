@@ -15,12 +15,6 @@ class PostTableViewCell: UITableViewCell {
         return "cellID"
     }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    
     // так как создаем в коде, то awakeFromNib вызываться не будет, поэтому настраиваем все в методе init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

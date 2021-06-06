@@ -90,9 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				C007D6D026558215007A5E15 /* ProfileViewController.swift */,
+				C0DB8BCA266AA20D00C9FD49 /* PostTableViewCell.swift */,
 				C0DB8BB4266A052C00C9FD49 /* ProfileHeaderView.swift */,
 				C026B1DB2665427700B7AFE6 /* LoginViewController.swift */,
-				C0DB8BCA266AA20D00C9FD49 /* PostTableViewCell.swift */,
 				C00B26402657B3B500F8E22A /* Profile.xcassets */,
 			);
 			path = Profile;

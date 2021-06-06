@@ -8,13 +8,9 @@
 
 import UIKit
 
-private let store = [
-    ModelPost(author: "LYALYUK ANNA", desciption: "desciptionOne", image: "imageOne", likes: 150, views: 766),
-    ModelPost(author: "LYALYUK ANNA", desciption: "desciptionOne", image: "imageOne", likes: 150, views: 766),
-    ModelPost(author: "LYALYUK ANNA", desciption: "desciptionOne", image: "imageOne", likes: 150, views: 766),
-    ModelPost(author: "LYALYUK ANNA", desciption: "desciptionOne", image: "imageOne", likes: 150, views: 766),
-    ModelPost(author: "LYALYUK ANNA", desciption: "desciptionOne", image: "imageOne", likes: 150, views: 766),
-    ModelPost(author: "LYALYUK ANNA", desciption: "desciptionOne", image: "imageOne", likes: 150, views: 766),
-    ModelPost(author: "LYALYUK ANNA", desciption: "desciptionOne", image: "imageOne", likes: 150, views: 766),
-    ModelPost(author: "LYALYUK ANNA", desciption: "desciptionOne", image: "imageOne", likes: 150, views: 766)
+let store = [
+    ModelPost(author: "LYALYUK ANNA", desciption: "СВЕТЯЩИЕСЯ КАМНИ CORE GLOW", image: "kamni", likes: 150, views: 766),
+    ModelPost(author: "LYALYUK ANNA", desciption: "ПЕС ПО КЛИЧКЕ СТАББИ ОТ БРОДЯГИ ДО ГЕРОЯ", image: "pes_stabbi", likes: 150, views: 766),
+    ModelPost(author: "LYALYUK ANNA", desciption: "ПОУЧИТЕЛЬНЫЙ ЭКСПЕРИМЕНТ СОЛОМОНА ЭША", image: "SolomonAsh", likes: 150, views: 766),
+    ModelPost(author: "LYALYUK ANNA", desciption: "ЛУЧШИЙ ЭЛЕКТРОМОБИЛЬ TESLA MODEL S SIGNATURE PERFOMANCE", image: "TeslaModelS", likes: 150, views: 766),
 ]
