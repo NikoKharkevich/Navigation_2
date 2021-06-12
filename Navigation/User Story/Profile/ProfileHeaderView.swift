@@ -3,15 +3,75 @@ import UIKit
 
 class ProfileHeaderView: UIView {
     
-//    private var statusText: String = ""
-    
     private let avatarImageView: UIImageView = {
-        let avatarImageView = UIImageView(image: #imageLiteral(resourceName: "Minon (1)"))
-    
-        avatarImageView.toAutoLayout()
-        return avatarImageView
-        
+        let image = UIImageView(image: #imageLiteral(resourceName: "Minon (1)"))
+        image.layer.borderWidth = 3
+        image.layer.borderColor = UIColor.white.cgColor
+        image.layer.cornerRadius = 55
+        image.clipsToBounds = true
+        image.contentMode = .scaleAspectFill
+        image.toAutoLayout()
+        return image
     }()
+    
+    private let userName: UILabel = {
+        let label = UILabel()
+        label.text = "Crazy Dave"
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.textColor = .black
+        label.toAutoLayout()
+        return label
+    }()
+    
+    private let userStatus: UILabel = {
+        let label = UILabel()
+        label.text = "I am so excited..."
+        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.textColor = .gray
+        label.toAutoLayout()
+        return label
+    }()
+    
+    private let statusButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Set status", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 4
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 4, height: 4)
+        button.layer.shadowOpacity = 0.7
+        button.addTarget(self, action: #selector(statusTextChanged), for: .editingChanged)
+        button.toAutoLayout()
+        return button
+    }()
+    
+    private let setStatus: UITextField = {
+        let text = UITextField()
+        text.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: text.frame.height))
+        text.leftViewMode = .always
+        text.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        text.textColor = .black
+        text.backgroundColor = .white
+        text.layer.borderWidth = 1
+        text.layer.borderColor = UIColor.black.cgColor
+        text.layer.cornerRadius = 12
+        text.placeholder = "Set your status here"
+        text.clipsToBounds = true
+        text.toAutoLayout()
+        text.addTarget(self, action: #selector(statusTextChanged), for: .editingChanged)
+        return text
+    }()
+    
+    private var statusText = String()
+    
+    @objc func statusTextChanged(_ textField: UITextField) {
+        statusText = setStatus.text ?? "Enter new status"
+    }
+    
+    @objc func buttonPressed() {
+        userStatus.text = statusText
+    }
     
     override init(frame: CGRect) {
       super.init(frame: frame)
@@ -24,6 +84,11 @@ class ProfileHeaderView: UIView {
     
     func setupView() {
         addSubview(avatarImageView)
+        addSubview(userName)
+        addSubview(userStatus)
+        addSubview(statusButton)
+        addSubview(setStatus)
+        
         setupConstraints()
     }
     
@@ -33,60 +98,29 @@ class ProfileHeaderView: UIView {
             avatarImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
             avatarImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             avatarImageView.widthAnchor.constraint(equalToConstant: 110),
-            avatarImageView.heightAnchor.constraint(equalToConstant: 110)
+            avatarImageView.heightAnchor.constraint(equalToConstant: 110),
+            
+            userName.topAnchor.constraint(equalTo: self.topAnchor, constant: 27),
+            userName.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 16),
+            userName.heightAnchor.constraint(equalToConstant: 18),
+            
+            statusButton.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 32),
+            statusButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            statusButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            statusButton.heightAnchor.constraint(equalToConstant: 50),
+            statusButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16),
+            
+            setStatus.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 16),
+            setStatus.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            setStatus.bottomAnchor.constraint(equalTo: statusButton.topAnchor, constant: -10),
+            setStatus.heightAnchor.constraint(equalToConstant: 40),
+            
+            userStatus.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 16),
+            userStatus.bottomAnchor.constraint(equalTo: setStatus.topAnchor, constant: -10),
+            userStatus.heightAnchor.constraint(equalToConstant: userStatus.font.pointSize)
+            
         ]
         NSLayoutConstraint.activate(constraints)
     }
-    
-    
-
-    //
-//    @IBOutlet weak var avatarImageView: UIImageView!
-//    @IBOutlet weak var fullNameLabel: UITextField!
-//    @IBOutlet weak var setStatusButton: UIButton!
-//    @IBAction func setStatusButton(_ sender: UIButton) {
-//        statusLabel.text = statusTextField.text
-//    }
-//
-//    @IBOutlet weak var statusLabel: UILabel!
-//    @IBOutlet weak var statusTextField: UITextField!
-//
-//    @objc func statusTextChanged() {
-//        statusText = statusTextField.text!
-//    }
-    
-//    override func awakeFromNib() {
-//        avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width / 2
-//        avatarImageView.layer.borderWidth = 3
-//        avatarImageView.layer.borderColor = UIColor.white.cgColor
-//        avatarImageView.clipsToBounds = true
-//
-//        setStatusButton.setTitle("Set status", for: .normal)
-//        setStatusButton.setTitleColor(.white, for: .normal)
-//        setStatusButton.backgroundColor = .systemBlue
-//        setStatusButton.layer.cornerRadius = 4
-//        setStatusButton.layer.shadowOffset = CGSize(width: 4, height: 4)
-//        setStatusButton.layer.shadowRadius = 4
-//        setStatusButton.layer.shadowColor = UIColor.black.cgColor
-//        setStatusButton.layer.shadowOpacity = 0.7
-//
-//        setStatusButton.addTarget(self, action: #selector(statusTextChanged), for: .editingChanged)
-//
-//        statusLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-//        statusLabel.textColor = .gray
-//
-//        fullNameLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-//        fullNameLabel.textColor = .black
-//        fullNameLabel.text = "My Name..."
-//
-//        statusTextField.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-//        statusTextField.textColor = .black
-//        statusTextField.backgroundColor = .white
-//
-//        statusTextField.layer.cornerRadius = 12
-//        statusTextField.layer.borderColor = UIColor.black.cgColor
-//        statusTextField.layer.borderWidth = 1
-//        statusTextField.clipsToBounds = true
-//    }
     
 }

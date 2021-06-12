@@ -23,45 +23,46 @@ class PostTableViewCell: UITableViewCell {
     static let identifier = "PostTableViewCell"
     
     private let postName: UILabel = {
-        let postName = UILabel()
-        postName.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        postName.textColor = .black
-        
-        return postName
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.textColor = .black
+        label.numberOfLines = 2
+        label.textAlignment = .left
+        return label
     }()
     
     private let postImage: UIImageView = {
-        let postImage = UIImageView()
-        postImage.contentMode = .scaleAspectFit
-        postImage.backgroundColor = .black
+        let image = UIImageView()
+        image.contentMode = .scaleAspectFit
+        image.backgroundColor = .black
         
-        return postImage
+        return image
         
     }()
     
-    private let postText: UITextField = {
-        let postText = UITextField()
-        postText.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        postText.textColor = .systemGray
-//        numberOfLines = 0
-        
-        return postText
+    private let postText: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.textColor = .systemGray
+        label.numberOfLines = 0
+        label.textAlignment = .left
+        return label
     }()
     
     private let postLikes: UILabel = {
-        let likes = UILabel()
-        likes.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-        likes.textColor = .black
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        label.textColor = .black
         
-        return likes
+        return label
     }()
     
     private let postViews: UILabel = {
-        let views = UILabel()
-        views.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-        views.textColor = .black
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        label.textColor = .black
         
-        return views
+        return label
     }()
     
     override var reuseIdentifier: String? {
@@ -93,7 +94,6 @@ class PostTableViewCell: UITableViewCell {
         postName.translatesAutoresizingMaskIntoConstraints = false
         postName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16).isActive = true
         postName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
-        postName.heightAnchor.constraint(equalToConstant: 20).isActive = true
         postName.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
         
         postImage.translatesAutoresizingMaskIntoConstraints = false
@@ -105,7 +105,6 @@ class PostTableViewCell: UITableViewCell {
         postText.topAnchor.constraint(equalTo: postImage.bottomAnchor, constant: 16).isActive = true
         postText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
         postText.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
-        postText.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         postLikes.translatesAutoresizingMaskIntoConstraints = false
         postLikes.topAnchor.constraint(equalTo: postText.bottomAnchor, constant: 16).isActive = true

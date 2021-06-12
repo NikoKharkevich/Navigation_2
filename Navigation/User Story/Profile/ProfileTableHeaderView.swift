@@ -16,6 +16,7 @@ class ProfileTableHeaderView: UITableViewHeaderFooterView {
         super.init(reuseIdentifier: reuseIdentifier)
         contentView.addSubview(profileHeaderView)
         profileHeaderView.toAutoLayout()
+        profileHeaderView.backgroundColor = .lightGray
         
         let constraints = [
             profileHeaderView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),

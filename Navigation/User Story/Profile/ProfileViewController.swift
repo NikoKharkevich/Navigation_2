@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
     private func setupTableView() {
         view.addSubview(tableView)
         tableView.frame = view.bounds
-        tableView.backgroundColor = .link
+        tableView.backgroundColor = .white
         
         tableView.dataSource = self
         tableView.delegate = self
