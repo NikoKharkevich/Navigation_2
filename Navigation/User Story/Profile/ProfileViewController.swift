@@ -27,11 +27,13 @@ class ProfileViewController: UIViewController {
     
     private func setupTableView() {
         view.addSubview(tableView)
-        tableView.frame = view.frame
+        tableView.frame = view.bounds
+        tableView.backgroundColor = .link
+        
         tableView.dataSource = self
         tableView.delegate = self
         
-        tableView.register(PostTableViewCell.self, forCellReuseIdentifier: "cellID")
+        tableView.register(PostTableViewCell.self, forCellReuseIdentifier: PostTableViewCell.identifier)
 
     }
 

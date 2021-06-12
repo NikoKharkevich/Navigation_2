@@ -10,14 +10,15 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
     private let label = UILabel()
+    static let identifier = "PostTableViewCell"
     
     override var reuseIdentifier: String? {
-        return "cellID"
+        return "PostTableViewCell"
     }
 
-    // так как создаем в коде, то awakeFromNib вызываться не будет, поэтому настраиваем все в методе init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.backgroundColor = .orange
         
         // настраиваем label
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -30,8 +31,7 @@ class PostTableViewCell: UITableViewCell {
             label.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
-    
-    // не используется
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
