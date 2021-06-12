@@ -10,7 +10,7 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
     
-    private var post: ModelPost? {
+     var post: ModelPost? {
         didSet {
             postName.text = post?.author
             postImage.image = UIImage(named: post!.image)
@@ -24,10 +24,9 @@ class PostTableViewCell: UITableViewCell {
     
     private let postName: UILabel = {
         let postName = UILabel()
-//        postName.text = "Post Name"
         postName.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         postName.textColor = .black
-//        cell.textLabel?.text = store[indexPath.row].desciption
+        
         return postName
     }()
     
@@ -44,8 +43,6 @@ class PostTableViewCell: UITableViewCell {
         let postText = UITextField()
         postText.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         postText.textColor = .systemGray
-        
-//        postText.text = "Some text/n second line/n 3rd line/n"
 //        numberOfLines = 0
         
         return postText
@@ -55,7 +52,6 @@ class PostTableViewCell: UITableViewCell {
         let likes = UILabel()
         likes.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         likes.textColor = .black
-//        likes.text = "Likes: 721"
         
         return likes
     }()
@@ -64,7 +60,6 @@ class PostTableViewCell: UITableViewCell {
         let views = UILabel()
         views.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         views.textColor = .black
-//        views.text = "Views: 546"
         
         return views
     }()

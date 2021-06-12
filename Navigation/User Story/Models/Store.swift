@@ -9,8 +9,9 @@
 import UIKit
 
 let postArray = [
-    ModelPost(author: "LYALYUK ANNA", desciption: "СВЕТЯЩИЕСЯ КАМНИ CORE GLOW", image: "kamni", likes: 150, views: 766),
-    ModelPost(author: "LYALYUK ANNA", desciption: "ПЕС ПО КЛИЧКЕ СТАББИ ОТ БРОДЯГИ ДО ГЕРОЯ", image: "pes_stabbi", likes: 150, views: 766),
-    ModelPost(author: "LYALYUK ANNA", desciption: "ПОУЧИТЕЛЬНЫЙ ЭКСПЕРИМЕНТ СОЛОМОНА ЭША", image: "SolomonAsh", likes: 150, views: 766),
-    ModelPost(author: "LYALYUK ANNA", desciption: "ЛУЧШИЙ ЭЛЕКТРОМОБИЛЬ TESLA MODEL S SIGNATURE PERFOMANCE", image: "TeslaModelS", likes: 150, views: 766),
+    ModelPost(author: "СВЕТЯЩИЕСЯ КАМНИ CORE GLOW", desciption: "СВЕТЯЩИЕСЯ КАМНИ CORE GLOW", image: "kamni", likes: 476, views: 732),
+    ModelPost(author: "ПЕС ПО КЛИЧКЕ СТАББИ ОТ БРОДЯГИ ДО ГЕРОЯ", desciption: "ПЕС ПО КЛИЧКЕ СТАББИ ОТ БРОДЯГИ ДО ГЕРОЯ", image: "pes_stabbi", likes: 685, views: 1066),
+    ModelPost(author: "ПОУЧИТЕЛЬНЫЙ ЭКСПЕРИМЕНТ СОЛОМОНА ЭША", desciption: "ПОУЧИТЕЛЬНЫЙ ЭКСПЕРИМЕНТ СОЛОМОНА ЭША", image: "SolomonAsh", likes: 270, views: 1333),
+    ModelPost(author: "ЛУЧШИЙ ЭЛЕКТРОМОБИЛЬ TESLA MODEL S SIGNATURE PERFOMANCE", desciption: "ЛУЧШИЙ ЭЛЕКТРОМОБИЛЬ TESLA MODEL S SIGNATURE PERFOMANCE", image: "TeslaModelS", likes: 645, views: 1918),
 ]
+

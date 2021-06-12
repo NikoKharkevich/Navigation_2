@@ -18,6 +18,7 @@
 		060782CA250CEE7200A87020 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060782C9250CEE7200A87020 /* Post.swift */; };
 		C007D6D126558215007A5E15 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007D6D026558215007A5E15 /* ProfileViewController.swift */; };
 		C00B26412657B3B500F8E22A /* Profile.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00B26402657B3B500F8E22A /* Profile.xcassets */; };
+		C01B45E62674C9AA00B5D234 /* ProfileTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B45E52674C9AA00B5D234 /* ProfileTableHeaderView.swift */; };
 		C026B1DC2665427700B7AFE6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C026B1DB2665427700B7AFE6 /* LoginViewController.swift */; };
 		C0DB8BB5266A052C00C9FD49 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB8BB4266A052C00C9FD49 /* ProfileHeaderView.swift */; };
 		C0DB8BBD266A8ECE00C9FD49 /* ModelPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB8BBC266A8ECE00C9FD49 /* ModelPost.swift */; };
@@ -40,6 +41,7 @@
 		060782C9250CEE7200A87020 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		C007D6D026558215007A5E15 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C00B26402657B3B500F8E22A /* Profile.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Profile.xcassets; sourceTree = "<group>"; };
+		C01B45E52674C9AA00B5D234 /* ProfileTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableHeaderView.swift; sourceTree = "<group>"; };
 		C026B1DB2665427700B7AFE6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C0DB8BB4266A052C00C9FD49 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		C0DB8BBC266A8ECE00C9FD49 /* ModelPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPost.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				C007D6D026558215007A5E15 /* ProfileViewController.swift */,
 				C0DB8BCA266AA20D00C9FD49 /* PostTableViewCell.swift */,
+				C01B45E52674C9AA00B5D234 /* ProfileTableHeaderView.swift */,
 				C0DB8BB4266A052C00C9FD49 /* ProfileHeaderView.swift */,
 				C026B1DB2665427700B7AFE6 /* LoginViewController.swift */,
 				C00B26402657B3B500F8E22A /* Profile.xcassets */,
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C026B1DC2665427700B7AFE6 /* LoginViewController.swift in Sources */,
+				C01B45E62674C9AA00B5D234 /* ProfileTableHeaderView.swift in Sources */,
 				060782B6250CE27700A87020 /* FeedViewController.swift in Sources */,
 				060782B2250CE27700A87020 /* AppDelegate.swift in Sources */,
 				060782C6250CEB0A00A87020 /* InfoViewController.swift in Sources */,

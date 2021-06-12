@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class ProfileViewController: UIViewController {
     
     private let tableView = UITableView(frame: .zero, style: .plain)
@@ -47,8 +46,7 @@ extension ProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as! PostTableViewCell
         
-//        cell.textLabel?.text = store[indexPath.row].desciption
-//        cell.imageView?.image = UIImage(named: store[indexPath.row].image)
+        cell.post = postArray[indexPath.row]
         
         return cell
     }
@@ -57,6 +55,12 @@ extension ProfileViewController: UITableViewDataSource {
         return 570
 //        return UITableView.automaticDimension
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
 
 }
 
@@ -67,4 +71,10 @@ extension ProfileViewController: UITableViewDelegate {
         // выбрали ряд
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard section == 0 else { return nil }
+        let headerView = ProfileTableHeaderView()
+        return headerView
+    }
 }
+
