@@ -60,5 +60,4 @@ class ProfileHeaderView: UIView {
         statusTextField.clipsToBounds = true
     }
     
-    
 }
