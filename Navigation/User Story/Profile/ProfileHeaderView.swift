@@ -11,7 +11,6 @@ import UIKit
 class ProfileHeaderView: UIView {
     
     private var statusText: String = ""
-    
 
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var fullNameLabel: UITextField!
@@ -60,5 +59,6 @@ class ProfileHeaderView: UIView {
         statusTextField.layer.borderWidth = 1
         statusTextField.clipsToBounds = true
     }
+    
     
 }
