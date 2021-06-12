@@ -12,12 +12,10 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     private let tableView = UITableView(frame: .zero, style: .plain)
-    private let cellId = "cellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
-        
         setupTableView()
     }
 
@@ -43,19 +41,21 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return store.count
+        return postArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
-        cell.textLabel?.text = store[indexPath.row].desciption
-        cell.imageView?.image = UIImage(named: store[indexPath.row].image)
+        let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as! PostTableViewCell
+        
+//        cell.textLabel?.text = store[indexPath.row].desciption
+//        cell.imageView?.image = UIImage(named: store[indexPath.row].image)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        return 570
+//        return UITableView.automaticDimension
     }
 
 }
