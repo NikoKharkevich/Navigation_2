@@ -88,15 +88,12 @@ class LoginViewController: UIViewController {
     private let loginButton: UIButton = {
         let button = UIButton()
         let image = UIImage(named: "blue_pixel.png")
+
+        button.setBackgroundImage(image!.alpha(0.8), for: .selected)
+        
         button.setBackgroundImage(image, for: .normal)
         button.setTitle("Log In", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        
-        if button.isSelected { button.alpha = 0.8 } else
-        if button.isHighlighted { button.alpha = 0.8 } else
-        if button.isEnabled == false { button.alpha = 0.8 } else {
-            button.alpha = 1
-        }
         
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
@@ -196,4 +193,12 @@ class LoginViewController: UIViewController {
     
 }
 
-
+extension UIImage {
+    func alpha(_ value:CGFloat) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        draw(at: CGPoint.zero, blendMode: .normal, alpha: value)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
+    }
+}
