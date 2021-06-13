@@ -47,25 +47,19 @@ extension ProfileViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 570
+        return 770
 //        return UITableView.automaticDimension
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+    func numberOfSections(in tableView: UITableView) -> Int { 1 }
 
 }
 
 // MARK: UITableViewDelegate
 extension ProfileViewController: UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // выбрали ряд
-    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard section == 0 else { return nil }
+        guard section == 0 else { return nil}
         let headerView = ProfileTableHeaderView()
         return headerView
     }
