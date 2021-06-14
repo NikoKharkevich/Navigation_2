@@ -105,10 +105,12 @@ class PostTableViewCell: UITableViewCell {
         postText.topAnchor.constraint(equalTo: postImage.bottomAnchor, constant: 16).isActive = true
         postText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
         postText.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
+//        postText.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -50).isActive = true
         
         postLikes.translatesAutoresizingMaskIntoConstraints = false
         postLikes.topAnchor.constraint(equalTo: postText.bottomAnchor, constant: 16).isActive = true
         postLikes.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
+//        postLikes.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16).isActive = true
         
         postViews.translatesAutoresizingMaskIntoConstraints = false
         postViews.topAnchor.constraint(equalTo: postText.bottomAnchor, constant: 16).isActive = true
