@@ -28,6 +28,7 @@ class PostTableViewCell: UITableViewCell {
         label.textColor = .black
         label.numberOfLines = 2
         label.textAlignment = .left
+        label.toAutoLayout()
         return label
     }()
     
@@ -35,6 +36,7 @@ class PostTableViewCell: UITableViewCell {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
         image.backgroundColor = .black
+        image.toAutoLayout()
         
         return image
         
@@ -46,6 +48,7 @@ class PostTableViewCell: UITableViewCell {
         label.textColor = .systemGray
         label.numberOfLines = 0
         label.textAlignment = .left
+        label.toAutoLayout()
         return label
     }()
     
@@ -53,6 +56,7 @@ class PostTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         label.textColor = .black
+        label.toAutoLayout()
         
         return label
     }()
@@ -61,6 +65,7 @@ class PostTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         label.textColor = .black
+        label.toAutoLayout()
         
         return label
     }()
@@ -75,6 +80,7 @@ class PostTableViewCell: UITableViewCell {
         contentView.addSubview(postText)
         contentView.addSubview(postLikes)
         contentView.addSubview(postViews)
+
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -91,30 +97,27 @@ class PostTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        postName.translatesAutoresizingMaskIntoConstraints = false
-        postName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16).isActive = true
-        postName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
-        postName.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
-        
-        postImage.translatesAutoresizingMaskIntoConstraints = false
-        postImage.topAnchor.constraint(equalTo: postName.bottomAnchor, constant: 12).isActive = true
-        postImage.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
-        postImage.heightAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
-        
-        postText.translatesAutoresizingMaskIntoConstraints = false
-        postText.topAnchor.constraint(equalTo: postImage.bottomAnchor, constant: 16).isActive = true
-        postText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
-        postText.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
-//        postText.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -50).isActive = true
-        
-        postLikes.translatesAutoresizingMaskIntoConstraints = false
-        postLikes.topAnchor.constraint(equalTo: postText.bottomAnchor, constant: 16).isActive = true
-        postLikes.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
-//        postLikes.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16).isActive = true
-        
-        postViews.translatesAutoresizingMaskIntoConstraints = false
-        postViews.topAnchor.constraint(equalTo: postText.bottomAnchor, constant: 16).isActive = true
-        postViews.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
+        let cellConstraints = [
+            postName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            postName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            postName.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+            
+            postImage.topAnchor.constraint(equalTo: postName.bottomAnchor, constant: 12),
+            postImage.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+            postImage.heightAnchor.constraint(equalTo: contentView.widthAnchor),
+            
+            postText.topAnchor.constraint(equalTo: postImage.bottomAnchor, constant: 16),
+            postText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            postText.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            
+            postLikes.topAnchor.constraint(equalTo: postText.bottomAnchor, constant: 16),
+            postLikes.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+
+            postViews.topAnchor.constraint(equalTo: postText.bottomAnchor, constant: 16),
+            postViews.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+        ]
+        NSLayoutConstraint.activate(cellConstraints)
+
     }
 
 }
