@@ -88,15 +88,6 @@ class PostTableViewCell: UITableViewCell {
         contentView.backgroundColor = .white
         setupPostCell()
         
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
         let cellConstraints = [
             postName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             postName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
@@ -117,7 +108,11 @@ class PostTableViewCell: UITableViewCell {
             postViews.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
         ]
         NSLayoutConstraint.activate(cellConstraints)
-
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
 }
