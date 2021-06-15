@@ -1,10 +1,3 @@
-//
-//  PostTableViewCell.swift
-//  Navigation
-//
-//  Created by Nikola Kharkevich on 04.06.2021.
-//  Copyright © 2021 Artem Novichkov. All rights reserved.
-//
 
 import UIKit
 
@@ -80,7 +73,6 @@ class PostTableViewCell: UITableViewCell {
         contentView.addSubview(postText)
         contentView.addSubview(postLikes)
         contentView.addSubview(postViews)
-
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -93,7 +85,7 @@ class PostTableViewCell: UITableViewCell {
             postName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             postName.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             
-            postImage.topAnchor.constraint(equalTo: postName.bottomAnchor, constant: 12),
+            postImage.topAnchor.constraint(equalTo: postName.bottomAnchor, constant: 16),
             postImage.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             postImage.heightAnchor.constraint(equalTo: contentView.widthAnchor),
             
@@ -103,6 +95,7 @@ class PostTableViewCell: UITableViewCell {
             
             postLikes.topAnchor.constraint(equalTo: postText.bottomAnchor, constant: 16),
             postLikes.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            postLikes.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
 
             postViews.topAnchor.constraint(equalTo: postText.bottomAnchor, constant: 16),
             postViews.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),

@@ -1,10 +1,3 @@
-//
-//  Store.swift
-//  Navigation
-//
-//  Created by Nikola Kharkevich on 04.06.2021.
-//  Copyright © 2021 Artem Novichkov. All rights reserved.
-//
 
 import UIKit
 
@@ -15,3 +8,4 @@ let postArray = [
     ModelPost(author: "ЛУЧШИЙ ЭЛЕКТРОМОБИЛЬ TESLA MODEL S SIGNATURE PERFOMANCE", desciption: "В обществе пока считают, что электромобиль просто не может быть удобным и быстрым. Но Tesla Model S Signature Perfomance полностью ломает любые стереотипы. Запас хода этого автомобиля 480 км, его максимальная скорость 209 км/ч. Удивляет и разгон машины за 4,4 секунды до 100 км/ч! Полностью заряжается за 5 часов от 220 В.\nНо на особых станциях машину можно зарядить и за 30 минут. Сегодня Tesla Model S - самый безопасный серийным автомобиль, который когда либо создавался человеком.\nТакже автомобиль был удостоен по всем тестам 5 звездам NCAP. Самое приятное то, что все эти плюсы при нулевом выбросе CO2.", image: "TeslaModelS", likes: 645, views: 1918),
 ]
 
+let photoCell = ["bizon", "cow", "falmingo", "shepherd"]
