@@ -76,11 +76,28 @@ extension ProfileViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return UITableView.automaticDimension
+        switch section {
+        case 0:
+            return UITableView.automaticDimension
+        default:
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(type(of: self), #function)
+        
         tableView.deselectRow(at: indexPath, animated: true)
-        self.navigationController?.pushViewController(PhotosViewController(), animated: true)
+        
+        guard indexPath.section == 0 else {
+            print("❌ Wrong section")
+            return
+        }
+        
+        guard let navigationController = navigationController else {
+            print("❌ Missing navigation controller")
+            return
+        }
+        navigationController.pushViewController(PhotosViewController(), animated: true)
     }
 }
