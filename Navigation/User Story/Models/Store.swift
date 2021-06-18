@@ -25,3 +25,5 @@ let postArray = [
 ]
 
 let photoCell = ["bizon", "cow", "falmingo", "shepherd"]
+
+let photoCollectionArray = ["bizon", "cow", "falmingo", "shepherd"]
