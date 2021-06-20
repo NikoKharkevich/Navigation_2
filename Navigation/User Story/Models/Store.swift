@@ -24,6 +24,27 @@ let postArray = [
               views: 1918),
 ]
 
-let photoCell = ["bizon", "cow", "falmingo", "shepherd"]
+let photoCell = ["bizon", "cow", "flamingo", "shepherd"]
 
-let photoCollectionArray = ["bizon", "cow", "falmingo", "shepherd"]
+let photoCollectionArray: [UIImage] = [
+    UIImage(named: "bizon")!,
+    UIImage(named: "cow")!,
+    UIImage(named: "flamingo")!,
+    UIImage(named: "shepherd")!,
+    UIImage(named: "image5")!,
+    UIImage(named: "image6")!,
+    UIImage(named: "image7")!,
+    UIImage(named: "image8")!,
+    UIImage(named: "image9")!,
+    UIImage(named: "image10")!,
+    UIImage(named: "image11")!,
+    UIImage(named: "image12")!,
+    UIImage(named: "image13")!,
+    UIImage(named: "image14")!,
+    UIImage(named: "image15")!,
+    UIImage(named: "image16")!,
+    UIImage(named: "image17")!,
+    UIImage(named: "image18")!,
+    UIImage(named: "image19")!,
+    UIImage(named: "image20")!
+]

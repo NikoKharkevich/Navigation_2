@@ -39,13 +39,13 @@ private extension PhotosViewController {
 // MARK: UICollectionViewDataSource
 extension PhotosViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return photoCollectionArray.count
-        return 20
+        return photoCollectionArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PhotosCollectionViewCell.self), for: indexPath) as! PhotosCollectionViewCell
-        cell.contentView.backgroundColor = .red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosCollectionViewCell", for: indexPath) as! PhotosCollectionViewCell
+        cell.backgroundColor = .red
+        cell.cellImage.image = photoCollectionArray[indexPath.row]
         
         return cell
     }
