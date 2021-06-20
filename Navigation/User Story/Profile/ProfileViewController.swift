@@ -94,10 +94,7 @@ extension ProfileViewController: UITableViewDelegate {
             return
         }
         
-        guard let navigationController = navigationController else {
-            print("❌ Missing navigation controller")
-            return
-        }
-        navigationController.pushViewController(PhotosViewController(), animated: true)
+        let vc = storyboard?.instantiateViewController(identifier: "PhotosVC") as! PhotosViewController
+        present(vc, animated: true, completion: nil)
     }
 }
