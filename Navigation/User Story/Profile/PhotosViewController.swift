@@ -14,6 +14,14 @@ class PhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        navigationController?.navigationBar.isHidden = false
+        navigationItem.title = "Photo Gallery"
+        navigationController?.navigationBar.topItem?.title = "Back"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        navigationController?.navigationBar.isHidden = true
     }
 }
 

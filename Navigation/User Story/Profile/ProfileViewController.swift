@@ -95,6 +95,6 @@ extension ProfileViewController: UITableViewDelegate {
         }
         
         let vc = storyboard?.instantiateViewController(identifier: "PhotosVC") as! PhotosViewController
-        present(vc, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
