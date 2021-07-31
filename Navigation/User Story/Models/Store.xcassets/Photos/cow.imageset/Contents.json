@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "3E4AB22A00000578-4315762-A_boy_in_Nakhon_si_Thammarat_South_Thailand_rests_his_weary_head-a-64_1489585355170.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
