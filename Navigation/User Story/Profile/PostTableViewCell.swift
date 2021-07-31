@@ -1,9 +1,10 @@
 
 import UIKit
+import StorageService
 
 class PostTableViewCell: UITableViewCell {
     
-     var post: ModelPost? {
+    var post: StorageService.ModelPost? {
         didSet {
             postName.text = post?.author
             postImage.image = UIImage(named: post!.image)

@@ -1,5 +1,6 @@
 
 import UIKit
+import StorageService
 
 let postArray = [
     ModelPost(author: "СВЕТЯЩИЕСЯ КАМНИ CORE GLOW",
