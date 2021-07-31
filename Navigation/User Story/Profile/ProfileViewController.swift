@@ -13,6 +13,11 @@ class ProfileViewController: UIViewController {
 
     }
     
+/*    Задача 2
+    Создать дубликат текущей схемы проекта, настроить запуск приложения с Release конфигурацией.
+    На экране ProfileViewController настроить разный цвет фона для Debug и Release сборки с помощью флага компиляции DEBUG.
+    Запустить обе схемы и проверить, что цвет фона меняется.
+ */
     func task2() {
         #if DEBUG
         view.backgroundColor = .yellow
