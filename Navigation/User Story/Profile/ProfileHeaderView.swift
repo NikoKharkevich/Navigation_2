@@ -93,8 +93,44 @@ class ProfileHeaderView: UIView {
         setupConstraints()
     }
     
+    private var sideInset: CGFloat { return 16 }
+    
     func setupConstraints() {
         
+        avatarImageView.snp.makeConstraints { make in
+            make.top.equalTo(self.snp.top).offset(sideInset)
+            make.leading.equalTo(self.snp.leading).offset(sideInset)
+            make.width.equalTo(110)
+            make.height.equalTo(110)
+        }
+        
+        userName.snp.makeConstraints { make in
+            make.top.equalTo(self.snp.top).offset(27)
+            make.leading.equalTo(avatarImageView.snp.trailing).offset(sideInset)
+            make.height.equalTo(18)
+        }
+        
+        statusButton.snp.makeConstraints { make in
+            make.top.equalTo(avatarImageView.snp.bottom).offset(32)
+            make.leading.equalTo(self.snp.leading).offset(sideInset)
+            make.trailing.equalTo(self.snp.trailing).offset(-sideInset)
+            make.height.equalTo(50)
+            make.bottom.equalTo(self.snp.bottom).offset(-sideInset)
+        }
+        
+        setStatus.snp.makeConstraints { make in
+            make.leading.equalTo(avatarImageView.snp.trailing).offset(sideInset)
+            make.trailing.equalTo(self.snp.trailing).offset(-sideInset)
+            make.bottom.equalTo(statusButton.snp.top).offset(-10)
+            make.height.equalTo(40)
+        }
+        
+        userStatus.snp.makeConstraints { make in
+            make.leading.equalTo(avatarImageView.snp.trailing).offset(sideInset)
+            make.bottom.equalTo(setStatus.snp.top).offset(-10)
+            make.height.equalTo(userStatus.font.pointSize)
+        }
+        /*
         let constraints = [
             avatarImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
             avatarImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
@@ -122,6 +158,7 @@ class ProfileHeaderView: UIView {
             
         ]
         NSLayoutConstraint.activate(constraints)
+ */
     }
     
 }

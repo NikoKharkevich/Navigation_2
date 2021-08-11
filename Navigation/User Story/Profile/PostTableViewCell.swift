@@ -1,18 +1,28 @@
 
 import UIKit
 import StorageService
+import iOSIntPackage
 
 class PostTableViewCell: UITableViewCell {
     
-    var post: StorageService.ModelPost? {
+    var post: ModelPost? {
         didSet {
             postName.text = post?.author
             postImage.image = UIImage(named: post!.image)
             postLikes.text = "Likes: \(post?.likes ?? 0)"
             postViews.text = "Views: \(post?.views ?? 0)"
             postText.text = post?.desciption
+            
+            if let image = UIImage(named: post!.image) {
+                imageProcessor.processImage(sourceImage: image, filter: post!.filter) {
+                    (image) in
+                    postImage.image = image
+                }
+            }
         }
     }
+    
+    private let imageProcessor = ImageProcessor()
 
     static let identifier = "PostTableViewCell"
     
@@ -80,6 +90,8 @@ class PostTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = .white
         setupPostCell()
+        
+        
         
         let cellConstraints = [
             postName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
