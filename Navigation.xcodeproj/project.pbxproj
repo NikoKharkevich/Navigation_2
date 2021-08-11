@@ -32,6 +32,7 @@
 		C09D792026C3882600FF1463 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D791F26C3882600FF1463 /* User.swift */; };
 		C09D792226C3886700FF1463 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D792126C3886700FF1463 /* UserService.swift */; };
 		C09D792426C388E900FF1463 /* CurrentUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D792326C388E900FF1463 /* CurrentUserService.swift */; };
+		C09D792626C38E2E00FF1463 /* TestUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D792526C38E2E00FF1463 /* TestUserService.swift */; };
 		C0DB8BB5266A052C00C9FD49 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB8BB4266A052C00C9FD49 /* ProfileHeaderView.swift */; };
 		C0DB8BCB266AA20D00C9FD49 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB8BCA266AA20D00C9FD49 /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 		C09D791F26C3882600FF1463 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C09D792126C3886700FF1463 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		C09D792326C388E900FF1463 /* CurrentUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserService.swift; sourceTree = "<group>"; };
+		C09D792526C38E2E00FF1463 /* TestUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserService.swift; sourceTree = "<group>"; };
 		C0DB8BB4266A052C00C9FD49 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		C0DB8BBC266A8ECE00C9FD49 /* ModelPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPost.swift; sourceTree = "<group>"; };
 		C0DB8BC5266A9DB200C9FD49 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				C09D791F26C3882600FF1463 /* User.swift */,
 				C09D792126C3886700FF1463 /* UserService.swift */,
 				C09D792326C388E900FF1463 /* CurrentUserService.swift */,
+				C09D792526C38E2E00FF1463 /* TestUserService.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				060782B2250CE27700A87020 /* AppDelegate.swift in Sources */,
 				C0474F4B26B583EA00EDC92A /* Store.swift in Sources */,
 				C09D792426C388E900FF1463 /* CurrentUserService.swift in Sources */,
+				C09D792626C38E2E00FF1463 /* TestUserService.swift in Sources */,
 				060782C6250CEB0A00A87020 /* InfoViewController.swift in Sources */,
 				C0DB8BB5266A052C00C9FD49 /* ProfileHeaderView.swift in Sources */,
 				060782B4250CE27700A87020 /* SceneDelegate.swift in Sources */,
