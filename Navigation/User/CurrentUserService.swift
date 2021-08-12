@@ -4,7 +4,7 @@ import StorageService
 
 class CurrentUserService: UserService {
     
-    let user = User(userName: "User")
+    let user = User(userName: "User", userAvatar: UIImage(named: "image8")!, userStatus: "Coding")
     
     func userService(userName: String) -> User? {
         

@@ -4,16 +4,39 @@ import StorageService
 
 class ProfileViewController: UIViewController {
     
+    let profileHeader = ProfileHeaderView()
+    
+    let userService: UserService
+    let enteredUserName: String
+    
+    init(userService: UserService, enteredUserName: String) {
+        self.userService = userService
+        self.enteredUserName = enteredUserName
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private let tableView = UITableView(frame: .zero, style: .plain)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         task2()
         setupTableView()
-
+        showUserData()
     }
     
-/*    Задача 2
+    func showUserData() {
+        if let user = userService.userService(userName: enteredUserName) {
+            profileHeader.userName.text = user.userName
+            profileHeader.userStatus.text = user.userStatus
+            profileHeader.avatarImageView.image = user.userAvatar
+        }
+    }
+    
+/*    Задача 1.2
     Создать дубликат текущей схемы проекта, настроить запуск приложения с Release конфигурацией.
     На экране ProfileViewController настроить разный цвет фона для Debug и Release сборки с помощью флага компиляции DEBUG.
     Запустить обе схемы и проверить, что цвет фона меняется.

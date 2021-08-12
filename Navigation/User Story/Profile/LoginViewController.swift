@@ -2,6 +2,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    private let currentUser = CurrentUserService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,6 +101,17 @@ class LoginViewController: UIViewController {
         return button
     }()
     
+    @objc private func tapOnLoginButton() {
+        if let enteredNamed = emailField.text,
+           let _ = currentUser.userService(userName: enteredNamed) {
+            let profileVC = ProfileViewController(userService: currentUser, enteredUserName: enteredNamed)
+//            navigationController?.pushViewController(profileVC, animated: true)
+            print("Correct login")
+        } else {
+            print("Wrong login")
+        }
+    }
+    
     func setupConstraints() {
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -152,13 +165,6 @@ class LoginViewController: UIViewController {
         
     }
     
-    @objc private func tapOnLoginButton() {
-
-        let controller = storyboard?.instantiateViewController(identifier: "ProfileVC")
-        navigationController?.pushViewController(controller!, animated: true)
-        
-    }
-
     
     // MARK: Keyboard
     override func viewWillAppear(_ animated: Bool) {
