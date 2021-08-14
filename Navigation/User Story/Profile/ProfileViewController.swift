@@ -23,13 +23,13 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        task2()
+        debugCheck()
         setupTableView()
         showUserData()
     }
     
     func showUserData() {
-        if let user = userService.userService(userName: enteredUserName) {
+        if let user = self.userService.userService(userName: self.enteredUserName) {
             profileHeader.userName.text = user.userName
             profileHeader.userStatus.text = user.userStatus
             profileHeader.avatarImageView.image = user.userAvatar
@@ -41,7 +41,7 @@ class ProfileViewController: UIViewController {
     На экране ProfileViewController настроить разный цвет фона для Debug и Release сборки с помощью флага компиляции DEBUG.
     Запустить обе схемы и проверить, что цвет фона меняется.
  */
-    func task2() {
+    func debugCheck() {
         #if DEBUG
         view.backgroundColor = .yellow
         #else

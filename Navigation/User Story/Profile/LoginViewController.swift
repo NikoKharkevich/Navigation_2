@@ -103,6 +103,18 @@ class LoginViewController: UIViewController {
     }()
     
     @objc private func tapOnLoginButton() {
+        
+        #if DEBUG
+        if let enteredNamed = emailField.text,
+           (testUser.userService(userName: enteredNamed) != nil) {
+            let profileVC = ProfileViewController(userService: testUser, enteredUserName: enteredNamed)
+            navigationController?.pushViewController(profileVC, animated: true)
+            print("Correct login")
+        } else {
+            print("Wrong login")
+        }
+
+        #else
         if let enteredNamed = emailField.text,
            (currentUser.userService(userName: enteredNamed) != nil) {
             let profileVC = ProfileViewController(userService: currentUser, enteredUserName: enteredNamed)
@@ -111,6 +123,9 @@ class LoginViewController: UIViewController {
         } else {
             print("Wrong login")
         }
+
+        #endif
+
     }
     
     func setupConstraints() {
