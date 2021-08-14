@@ -4,6 +4,7 @@ import UIKit
 class LoginViewController: UIViewController {
     
     private let currentUser = CurrentUserService()
+    private let testUser = TestUserService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,9 +104,9 @@ class LoginViewController: UIViewController {
     
     @objc private func tapOnLoginButton() {
         if let enteredNamed = emailField.text,
-           let _ = currentUser.userService(userName: enteredNamed) {
+           (currentUser.userService(userName: enteredNamed) != nil) {
             let profileVC = ProfileViewController(userService: currentUser, enteredUserName: enteredNamed)
-//            navigationController?.pushViewController(profileVC, animated: true)
+            navigationController?.pushViewController(profileVC, animated: true)
             print("Correct login")
         } else {
             print("Wrong login")
