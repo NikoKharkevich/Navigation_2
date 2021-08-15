@@ -107,7 +107,7 @@ extension ProfileViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard section == 0 else { return nil}
-        let headerView = ProfileTableHeaderView()
+        let headerView = profileHeader
         return headerView
     }
     

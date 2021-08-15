@@ -4,8 +4,8 @@ import SnapKit
 
 class ProfileHeaderView: UIView {
     
-     var avatarImageView: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "image8")!)
+     let avatarImageView: UIImageView = {
+        let image = UIImageView()
         image.layer.borderWidth = 3
         image.layer.borderColor = UIColor.white.cgColor
         image.layer.cornerRadius = 55
@@ -15,18 +15,16 @@ class ProfileHeaderView: UIView {
         return image
     }()
     
-     var userName: UILabel = {
+     let userName: UILabel = {
         let label = UILabel()
-//        label.text = "Crazy Dave"
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         label.textColor = .black
         label.toAutoLayout()
         return label
     }()
     
-     var userStatus: UILabel = {
+     let userStatus: UILabel = {
         let label = UILabel()
-//        label.text = "I am so excited..."
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         label.textColor = .gray
         label.toAutoLayout()
