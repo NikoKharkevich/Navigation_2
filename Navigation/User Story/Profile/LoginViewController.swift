@@ -128,6 +128,8 @@ class LoginViewController: UIViewController {
 
     }
     
+//    Switch constraints to snp
+    
     func setupConstraints() {
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
