@@ -5,6 +5,8 @@ class LoginViewController: UIViewController {
     
     private let currentUser = CurrentUserService()
     private let testUser = TestUserService()
+    
+    var delegate: LoginViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
