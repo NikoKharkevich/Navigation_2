@@ -19,6 +19,7 @@
 		C007D6D126558215007A5E15 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007D6D026558215007A5E15 /* ProfileViewController.swift */; };
 		C01B45E62674C9AA00B5D234 /* ProfileTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B45E52674C9AA00B5D234 /* ProfileTableHeaderView.swift */; };
 		C026B1DC2665427700B7AFE6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C026B1DB2665427700B7AFE6 /* LoginViewController.swift */; };
+		C0328EBC26E6657100F5482D /* LoginInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0328EBB26E6657100F5482D /* LoginInspector.swift */; };
 		C0474F3C26B57F9200EDC92A /* StorageService.h in Headers */ = {isa = PBXBuildFile; fileRef = C0474F2C26B57F9100EDC92A /* StorageService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0474F3F26B57F9200EDC92A /* StorageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0474F2A26B57F9100EDC92A /* StorageService.framework */; };
 		C0474F4026B57F9200EDC92A /* StorageService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0474F2A26B57F9100EDC92A /* StorageService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -33,8 +34,11 @@
 		C09D792226C3886700FF1463 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D792126C3886700FF1463 /* UserService.swift */; };
 		C09D792426C388E900FF1463 /* CurrentUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D792326C388E900FF1463 /* CurrentUserService.swift */; };
 		C09D792626C38E2E00FF1463 /* TestUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D792526C38E2E00FF1463 /* TestUserService.swift */; };
+		C09D792826CE1E5200FF1463 /* Checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D792726CE1E5200FF1463 /* Checker.swift */; };
+		C09D792B26CE1F5600FF1463 /* LoginViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D792A26CE1F5600FF1463 /* LoginViewControllerDelegate.swift */; };
 		C0DB8BB5266A052C00C9FD49 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB8BB4266A052C00C9FD49 /* ProfileHeaderView.swift */; };
 		C0DB8BCB266AA20D00C9FD49 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DB8BCA266AA20D00C9FD49 /* PostTableViewCell.swift */; };
+		C0E345B926E66E6F00208BE7 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E345B826E66E6F00208BE7 /* LoginFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,7 @@
 		C007D6D026558215007A5E15 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C01B45E52674C9AA00B5D234 /* ProfileTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableHeaderView.swift; sourceTree = "<group>"; };
 		C026B1DB2665427700B7AFE6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C0328EBB26E6657100F5482D /* LoginInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInspector.swift; sourceTree = "<group>"; };
 		C0474F2A26B57F9100EDC92A /* StorageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StorageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0474F2C26B57F9100EDC92A /* StorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageService.h; sourceTree = "<group>"; };
 		C0474F2D26B57F9100EDC92A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,10 +93,13 @@
 		C09D792126C3886700FF1463 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		C09D792326C388E900FF1463 /* CurrentUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserService.swift; sourceTree = "<group>"; };
 		C09D792526C38E2E00FF1463 /* TestUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserService.swift; sourceTree = "<group>"; };
+		C09D792726CE1E5200FF1463 /* Checker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
+		C09D792A26CE1F5600FF1463 /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
 		C0DB8BB4266A052C00C9FD49 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		C0DB8BBC266A8ECE00C9FD49 /* ModelPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPost.swift; sourceTree = "<group>"; };
 		C0DB8BC5266A9DB200C9FD49 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		C0DB8BCA266AA20D00C9FD49 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		C0E345B826E66E6F00208BE7 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		E797E77746DBDE5CC5C75F06 /* Pods-Navigation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Navigation.release.xcconfig"; path = "Target Support Files/Pods-Navigation/Pods-Navigation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +147,7 @@
 		060782B0250CE27700A87020 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				C09D792926CE1F2200FF1463 /* Login */,
 				C09D791E26C3880600FF1463 /* User */,
 				C0B5EC77265EB220002AB44F /* User Story */,
 				C0B5EC75265EB0AE002AB44F /* Supporting Files */,
@@ -158,7 +167,6 @@
 				C057408F26791E0B0063B25E /* PhotosTableViewCell.swift */,
 				C057409026791E0B0063B25E /* PhotosViewController.swift */,
 				C057408E26791E0B0063B25E /* PhotosCollectionViewCell.swift */,
-				C026B1DB2665427700B7AFE6 /* LoginViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -182,6 +190,18 @@
 				C09D792526C38E2E00FF1463 /* TestUserService.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		C09D792926CE1F2200FF1463 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C09D792726CE1E5200FF1463 /* Checker.swift */,
+				C026B1DB2665427700B7AFE6 /* LoginViewController.swift */,
+				C09D792A26CE1F5600FF1463 /* LoginViewControllerDelegate.swift */,
+				C0328EBB26E6657100F5482D /* LoginInspector.swift */,
+				C0E345B826E66E6F00208BE7 /* LoginFactory.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		C0B5EC75265EB0AE002AB44F /* Supporting Files */ = {
@@ -408,9 +428,13 @@
 				C0474F4B26B583EA00EDC92A /* Store.swift in Sources */,
 				C09D792426C388E900FF1463 /* CurrentUserService.swift in Sources */,
 				C09D792626C38E2E00FF1463 /* TestUserService.swift in Sources */,
+				C09D792B26CE1F5600FF1463 /* LoginViewControllerDelegate.swift in Sources */,
 				060782C6250CEB0A00A87020 /* InfoViewController.swift in Sources */,
 				C0DB8BB5266A052C00C9FD49 /* ProfileHeaderView.swift in Sources */,
 				060782B4250CE27700A87020 /* SceneDelegate.swift in Sources */,
+				C0E345B926E66E6F00208BE7 /* LoginFactory.swift in Sources */,
+				C09D792826CE1E5200FF1463 /* Checker.swift in Sources */,
+				C0328EBC26E6657100F5482D /* LoginInspector.swift in Sources */,
 				C007D6D126558215007A5E15 /* ProfileViewController.swift in Sources */,
 				060782C8250CEE5D00A87020 /* PostViewController.swift in Sources */,
 				C0DB8BCB266AA20D00C9FD49 /* PostTableViewCell.swift in Sources */,
