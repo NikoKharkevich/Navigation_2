@@ -35,6 +35,7 @@ class PhotosViewController: UIViewController, ImageLibrarySubscriber {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         navigationController?.navigationBar.isHidden = true
+        self.imagePublisher.removeSubscription(for: self)
     }
 }
 
