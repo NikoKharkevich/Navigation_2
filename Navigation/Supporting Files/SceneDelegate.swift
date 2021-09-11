@@ -7,15 +7,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
- 
-//    Задача 4.1: Delegate + Singlton
-        var loginInspector = LoginInspector()
-        
-//        if let tabController = window?.rootViewController as? UITabBarController,
-//           let loginNavigation = tabController.viewControllers?.last as? UINavigationController,
-//           let loginController = loginNavigation.viewControllers.first as? LoginViewController {
-//            loginController.delegate = loginInspector
-//        }
         
 //    Задача 4.2: Factory
         var loginFactory = MyLoginFactory()
@@ -23,11 +14,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let tabController = window?.rootViewController as? UITabBarController,
            let loginNavigation = tabController.viewControllers?.last as? UINavigationController,
            let loginController = loginNavigation.viewControllers.first as? LoginViewController {
-            loginController.loginFactory = loginFactory
+            loginController.delegate = loginFactory.makeLoginInspector()
         }
 
     }
-    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

@@ -9,10 +9,6 @@ class Checker {
     private init() { }
     
     func loginCheck(enteredLogin: String, enteredPswd: String) -> Bool {
-        if enteredLogin == login && enteredPswd == pswd {
-            return true
-        } else {
-            return false
-        }
+        return enteredLogin == login && enteredPswd == pswd 
     }
 }

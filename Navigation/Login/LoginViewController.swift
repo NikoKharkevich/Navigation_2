@@ -7,7 +7,6 @@ class LoginViewController: UIViewController {
     private let testUser = TestUserService()
     
     var delegate: LoginViewControllerDelegate?
-    var loginFactory: LoginFactory?
 
     override func viewDidLoad() {
         super.viewDidLoad()

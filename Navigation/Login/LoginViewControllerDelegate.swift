@@ -1,6 +1,6 @@
 
 protocol LoginViewControllerDelegate {
     
-    func loginInspectorCheck(checker: Checker, _enteredLogin: String, _enteredPswd: String) -> Bool 
+    func loginInspectorCheck(enteredLogin: String, enteredPswd: String) -> Bool 
     
 }

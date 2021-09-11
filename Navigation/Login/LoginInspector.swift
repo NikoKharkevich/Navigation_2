@@ -1,9 +1,7 @@
 
 class LoginInspector: LoginViewControllerDelegate {
     
-    static var loginInspector = LoginInspector()
-    
-    func loginInspectorCheck(checker: Checker, _enteredLogin: String, _enteredPswd: String) -> Bool {
-        return Checker.shared.loginCheck(enteredLogin: _enteredLogin, enteredPswd: _enteredPswd)
+    func loginInspectorCheck(enteredLogin: String, enteredPswd: String) -> Bool {
+        return Checker.shared.loginCheck(enteredLogin: enteredLogin, enteredPswd: enteredPswd)
     }
 }
