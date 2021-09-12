@@ -129,8 +129,8 @@ extension ProfileViewController: UITableViewDelegate {
             print("❌ Wrong section")
             return
         }
-        
-        let vc = storyboard?.instantiateViewController(identifier: "PhotosVC") as! PhotosViewController
+
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PhotosVC")
         navigationController?.pushViewController(vc, animated: true)
     }
 }
