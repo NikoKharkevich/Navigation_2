@@ -118,17 +118,18 @@ class LoginViewController: UIViewController {
 
         #else
         if let enteredNamed = emailField.text,
-           (currentUser.userService(userName: enteredNamed) != nil) {
+           delegate?.loginInspectorCheck(enteredLogin: emailField.text ?? "", enteredPswd: passField.text ?? "") == true  {
             let profileVC = ProfileViewController(userService: currentUser, enteredUserName: enteredNamed)
             navigationController?.pushViewController(profileVC, animated: true)
-            print("Correct login")
+            print("Correct!")
         } else {
-            print("Wrong login")
+            print("Wrong login or password")
         }
 
         #endif
 
     }
+    
     
 //    Switch constraints to snp
     
