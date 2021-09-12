@@ -3,11 +3,7 @@ import UIKit
 import StorageService
 import iOSIntPackage
 
-class PhotosViewController: UIViewController, ImageLibrarySubscriber {
-    func receive(images: [UIImage]) {
-        self.imageArray = images
-        collectionView.reloadData()
-    }
+class PhotosViewController: UIViewController {
     
     private let imagePublisher = ImagePublisherFacade()
     private var imageArray = [UIImage]()
@@ -26,16 +22,11 @@ class PhotosViewController: UIViewController, ImageLibrarySubscriber {
         navigationController?.navigationBar.isHidden = false
         navigationItem.title = "Photo Gallery"
         navigationController?.navigationBar.topItem?.title = "Back"
-        
-        self.imagePublisher.subscribe(self)
-        self.imagePublisher.addImagesWithTimer(time: 1, repeat: 10)
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         navigationController?.navigationBar.isHidden = true
-        self.imagePublisher.removeSubscription(for: self)
     }
 }
 
@@ -61,14 +52,12 @@ private extension PhotosViewController {
 // MARK: UICollectionViewDataSource
 extension PhotosViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return photoCollectionArray.count
         return imageArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosCollectionViewCell", for: indexPath) as! PhotosCollectionViewCell
         cell.backgroundColor = .red
-//        cell.cellImage.image = photoCollectionArray[indexPath.row]
         cell.cellImage.image = imageArray[indexPath.row]
         
         return cell
@@ -114,4 +103,24 @@ extension PhotosViewController {
     private var cellWidth: CGFloat {
         return widthForCell(with: collectionView, cellsInRow: 3)
     }
+}
+
+extension PhotosViewController: ImageLibrarySubscriber {
+    
+    func receive(images: [UIImage]) {
+        self.imageArray = images
+        collectionView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.imagePublisher.subscribe(self)
+        self.imagePublisher.addImagesWithTimer(time: 1, repeat: 12)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        self.imagePublisher.removeSubscription(for: self)
+    }
+    
 }

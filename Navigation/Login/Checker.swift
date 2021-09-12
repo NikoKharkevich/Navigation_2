@@ -1,7 +1,7 @@
 
 class Checker {
     
-    private let login = "Dave"
+    private let login = "User"
     private let pswd = "pass"
     
     static var shared = Checker()
